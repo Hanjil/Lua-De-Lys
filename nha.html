@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lua de Lys</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="Medio">
+    <header class="Teste">
+        <div class="DropDown">
+            <div class="Select">
+                <span class="Selected">Aviso</span>
+                <div class="Caret"></div>
+            </div>
+            <ul class="Menu Aviso">
+                <h2>Introdução e aviso legal</h2>
+                <p>Oi, tudo bem? Isso sou eu divagando, você pode pular para o fim da página e ler logo se quiser!</p>
+                <p>Se você ainda não me conhece, eu sou Ahelin. Venho com orgulho trazer a versão finalizada de Lua de Lys, o mimo que escrevi a todas as pessoas que sentem tanta falta de conteúdo sobre o Lysandre quanto eu. </p>
+                <p>Quero agradecer muito por todo o carinho e incentivo que recebi desde o início dessa ideia, e mais ainda por não desistirem de mim depois que demorei tanto para finalizar! Agora, finalmente, ela está aqui, em toda a sua glória e doze mil palavras.</p> 
+                <p>Como todo mundo sabe, o Lys não é meu personagem! Estou carinhosamente pegando ele emprestado com a Chino, apenas, assim como todos os outros mencionados aqui.</p>
+            
+                <h2>Personalização</h2>
+                <p>Aqui, você pode preencher com o seu nome (ou o nome que usava no jogo) e escolher o conjunto de pronomes que mais lhe agrada durante a história.</p>
+                <p>É importante ressaltar que o texto muda um pouquinho com cada conjunto de pronomes. Eu queria muito fugir da cisnormatividade quando escrevendo docetes homens, mulheres e não-binários, mas acabei me resignando a papéis de gênero e representações muito fechadas nas caixinhas. Tomei essa decisão criativa porque, além de mim, muitas das pessoas lendo a fanfic eram trans; sendo assim, preferi me ater a estereótipos de gênero que não fossem causar tanta disforia nos leitores. Um exemplo bem simples é o fato dos maridos do Lys ganharem beijos na têmpora quando as esposas ganhavam beijos na testa, e outras pequenas coisas consideradas femininas que poderiam causar desconforto em alguns homens trans.</p>
+                <p>Tudo isso pra dizer que você pode, e deve, preencher esse texto com seus próprios headcanons! Isso aqui é só uma pequena base, fique à vontade pra teorizar ou alterar o que quiser pra encaixar na sua história como faria com um episódio qualquer de AD.</p>
+            
+                <p>Sem mais delongas… Aproveite a viagem.</p>
+            </ul>
+        </div>
+
+        <div class="DropDown">
+            <div class="Select">
+                <span class="Selected">Personalização</span>
+                <div class="Caret"></div>
+            </div>
+            <ul class="Menu Custom">
+                <div class="Nome">
+                    <label>Seu nome:</label>
+                    <input type="text" id="Nome">
+                </div>
+                <div>
+                    <label>Escolha seus pronomes: </label>
+                    <button onclick="trocarTexto('Fem.html')">Ela/Dela</button>
+                    <button onclick="trocarTexto('Neu.html')">Elu/Delu</button>
+                    <button onclick="trocarTexto('Masc.html')">Ele/Dele</button>              
+                </div>
+            </ul>
+        </div>
+
+        <div class="DropDown">
+            <div class="Select">
+                <span class="Selected">Configurações Pagina</span>
+                <div class="Caret"></div>
+            </div>
+            <ul class="Menu Confi">
+                <div>
+                    <label>Cor da pag:</label>
+                    <button onclick="Troca('Branco')">Branco</button>
+                    <button onclick="Troca('Medio')">Medio</button>
+                    <button onclick="Troca('Preto')">Preto</button>
+                </div>
+                <div>
+                    <label>Tamanho da fonte:</label>
+                    <button onclick="document.getElementById('Main').style.fontSize = '1em'">Pequena</button>
+                    <button onclick="document.getElementById('Main').style.fontSize = '1.25em'">Media</button>
+                    <button onclick="document.getElementById('Main').style.fontSize = '2em'">Grande</button>
+                </div>
+            </ul>
+        </div>
+
+        <div class="DropDown">
+            <div class="Select">
+                <span class="Selected">Navegação Capítulos</span>
+                <div class="Caret"></div>
+            </div>
+            <ul class="Menu Chap">
+                <div>
+                    <button onclick="location.href='#Cap1'">O caminho</button>
+                    <button onclick="location.href='#Cap2'">Torre da eternidade</button>
+                    <button onclick="location.href='#Cap3'">Palácio das Mentiras</button>
+                    <button onclick="location.href='#Cap4'">Em memória</button>
+                </div>
+            </ul>
+        </div>
+    </header>
+
+    <main id="Main">
+        <h1>LUA DE LYS</h1>
+        <div id="Fanfic" class="FicStyle"></div>
+    </main>
+</body>
+
+<script src="scripts.js"></script>
+
+</html>

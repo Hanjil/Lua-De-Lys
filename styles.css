@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    transition: .5s;
+    font-size: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+body.Branco {
+    background-color: rgb(255, 252, 247);
+    color: black;
+}
+body.Preto {
+    background-color: black;
+    color: antiquewhite;
+}
+body.Medio {
+    background-color: burlywood;
+    color: sienna;
+}
+
+main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 0;
+    margin-top: 110px;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.FicStyle {
+    width: 100vh;
+    height: auto;
+}
+
+button {
+    background-color: bisque;
+    margin: 5px;
+    border-width: 0;
+    width: auto;
+    font-size: large;
+    border-radius: 15px;
+    padding: .5em;
+    transition: .2s;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+body.Branco ::-webkit-scrollbar-track {
+    background: rgb(255, 252, 247);
+}
+body.Preto ::-webkit-scrollbar-track {
+    background: black;
+}
+body.Medio ::-webkit-scrollbar-track {
+    background: burlywood;
+}
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+
+.DropDown {
+    min-width: 14em;
+    position: relative;
+    margin: 2em;
+    z-index: 1;
+}
+
+.DropDown * {
+    box-sizing: border-box;
+}
+
+.Select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Caret {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: .5s;
+}
+body.Branco .Caret {
+    border-top: 6px solid #000000;
+}
+
+.Caret-Rotate {
+    transform: rotate(180deg);
+}
+
+.Menu {
+    padding: .2em .5em;
+    border-radius: .5em;
+    position: absolute;
+    top: 1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: .5em;
+    opacity: 0;
+    display: none;
+}
+body.Branco .Menu {
+    background-color: rgb(233, 226, 215);
+    box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.2);
+}
+body.Preto .Menu {
+    background-color: rgb(44, 44, 44);
+    box-shadow: 0 .5em 1em 0 rgba(255, 255, 255, 0.2);
+}
+body.Medio .Menu {
+    background-color: rgb(239, 204, 159);
+    box-shadow: 0 .5em 1em rgba(0, 0, 0, .2);
+}
+
+.Menu-Open {
+    display: block;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.Aviso {
+    height: 70vh;
+    overflow: auto;
+    left: 55%;
+    transform: translateX(-45%);
+    width: 150%;
+}
+.Custom {
+    width: 190%;
+}
+.Confi {
+    width: 170%;
+}
+.Chap {
+    width: 80%;
+}
+
+.Teste {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 1;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+body.Branco .Teste {
+    background-color: rgb(233, 226, 215);
+}
+body.Preto .Teste {
+    background-color: rgb(44, 44, 44);
+}
+body.Medio .Teste {
+    background-color: rgb(239, 204, 159);
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+html {
+    scroll-padding-top: 110px;
+}
