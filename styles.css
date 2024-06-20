@@ -32,7 +32,7 @@ main {
     align-items: center;
     flex-direction: column;
     z-index: 0;
-    margin-top: 110px;
+    margin-top: 140px;
 }
 
 h1 {
@@ -50,7 +50,7 @@ h1 {
 
 button {
     background-color: bisque;
-    margin: 5px;
+    margin-bottom: 5px;
     border-width: 0;
     width: auto;
     font-size: large;
@@ -62,7 +62,6 @@ button {
 button:hover {
     cursor: pointer;
     transform: scale(1.1);
-
 }
 
 ::-webkit-scrollbar {
@@ -83,21 +82,18 @@ body.Medio ::-webkit-scrollbar-track {
 }
 
 .DropDown {
-    min-width: 14em;
+    min-width: 5.5em;
     position: relative;
     margin: 2em;
     z-index: 1;
 }
 
-.DropDown * {
-    box-sizing: border-box;
-}
-
 .Select {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
+    position: relative;  /* Adicionado para manter o contexto de referência */
 }
 
 .Caret {
@@ -120,9 +116,9 @@ body.Branco .Caret {
     padding: .2em .5em;
     border-radius: .5em;
     position: absolute;
-    top: 1.5em;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 2em;
+    left: 46.5%;
+    transform: translateX(-52.5%);
     margin: .5em;
     opacity: 0;
     display: none;
@@ -150,18 +146,14 @@ body.Medio .Menu {
 .Aviso {
     height: 70vh;
     overflow: auto;
-    left: 55%;
-    transform: translateX(-45%);
-    width: 150%;
+    width: 15em;
 }
-.Custom {
-    width: 190%;
-}
-.Confi {
-    width: 170%;
-}
-.Chap {
-    width: 80%;
+
+.Aviso .Custom .Confi .Chap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .Cabecalho {
@@ -192,23 +184,64 @@ p {
 }
 
 html {
-    scroll-padding-top: 110px;
+    scroll-padding-top: 140px;
 }
 
-@media only screen and (max-width:1000px) {
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
     body {
-        width: 100%;
+        font-size: 18px;
+    }
+
+    .FicStyle {
+        width: 90vw;
     }
 
     .Cabecalho {
         width: 100%;
-        position: fixed;
-        top: 0;
         left: 50%;
         transform: translateX(-50%);
-        display: flex;
-        z-index: 1;
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .DropDown {
+        width: 45%;
+        margin: 0.5em;
+    }
+
+    button:hover {
+        cursor: pointer;
+        transform: scale(1);
+    }
+
+    .Menu {
+        margin: 0.5em;
+        position: fixed; /* Para tornar os menus fixos */
+        left: 50%; /* Centraliza horizontalmente */
+        top: 100%; /* Centraliza verticalmente */
+        transform: translate(-50%, 0%); /* Ajusta a posição para o centro exato */
+        z-index: 1000; /* Garante que os menus fiquem acima de outros elementos */
+    }
+    
+    .Aviso {
+        height: 50vh;
+    }
+    .Custom {
+        width: 40%;
+    }
+    .Confi {
+        width: 30%;
+    }
+    .Chap {
+        width: 25%;
+    }
+
+    html {
+        scroll-padding-top: 90px;
+    }
+
+    main {
+        margin-top: 90px;
     }
 }
